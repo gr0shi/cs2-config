@@ -1,5 +1,3 @@
-TODO
-
 # My Counter-Strike 2 config
 
 This CS2 config comes from years of accumulating information from various sources and maintaining it up to date with every game update introducing new features and deprecating others.
