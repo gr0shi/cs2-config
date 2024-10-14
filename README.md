@@ -16,7 +16,7 @@ Download an archive of this repository by clicking the "Clone or download" green
 
 Copy the downloaded `cs2-config-main.zip` file to the folder where you want to store the config files, for example `%USERPROFILE%\Documents` and unzip it.
 
-Edit the `copy-cfg-files-windows.cmd` script to verify that the `cs2_install_path` variable is identical to your CS:GO install path and change it if that's not the case.
+Edit the `copy-cfg-files-windows.cmd` script to verify that the `cs2_install_path` variable is identical to your CS2 install path and change it if that's not the case.
 
 Right click on the `copy-cfg-files-windows.cmd` file and click on "Execute as Administrator".
 
@@ -26,11 +26,11 @@ Verify that the files were correctly copied by navigating to your cs2 `cfg` fold
 
 ### General
 
-You don't need to add `+exec autoexec.cfg` to your CS:GO launch options but you need to add `-language textmod` or `-language colormod` to enable the Orel's or BananaGaming's Text Mod.
+You don't need to add `+exec autoexec.cfg` to your CS2 launch options but you need to add `-language textmod` or `-language colormod` to enable the Orel's or BananaGaming's Text Mod.
 
-From now on you shouldn't modify CS:GO settings[1] by using the in-game menu. If you do so your modifications will be overwritten by the settings stored in the `.cfg` files the next time you open CS:GO. If you want to modify a particular setting you will need to directly edit the corresponding `.cfg` file.
+From now on you shouldn't modify CS2 settings by using the in-game menu. If you do so your modifications will be overwritten by the settings stored in the `.cfg` files the next time you open CS2. If you want to modify a particular setting you will need to directly edit the corresponding `.cfg` file.
 
-[1] The only exception is video settings that are not modified by the `autoexec.cfg` file.
+The only exception is video settings that are not modified by the `autoexec.cfg` file.
 
 For optimal use, you shouldn't delete the folder that contains the git repository that's in your `Documents` folder in order to edit the files it contains later and just re-execute the `copy-cfg-files` script again.
 
@@ -42,12 +42,11 @@ For example if you want to enable *Demo view mode* you just need the execute the
 
 ### Launch Options
 
-`-tickrate 128 -novid -nojoy -exec autoexec -language english`
+`-tickrate 128 -novid +exec autoexec -language english`
 
 - `tickrate 128` how many times per second the server calculates stuff. tickrate 128 - highest possible tickrate in CS
 - `novid` to skip the video intro.
-- `nojoy` is required for me since the Panorama update on Linux because I have an Xbox One controller plugged-in at all time and CS:GO crash at launch in this situation. See this [github issue](https://github.com/ValveSoftware/csgo-osx-linux/issues/1801) to learn more.
-- `exec autoexec` used to automatically execute the config
+- `+exec autoexec` used to automatically execute the config
 - `cpu_frequency_monitoring 2` to see if CPU thermal throttling is an issue
 - `language english` to enable by default english language.
 
@@ -71,4 +70,4 @@ For example if you want to enable *Demo view mode* you just need the execute the
 
 ## Contributing
 
-Contributions are welcome if you see any area of improvement possible to the scripts or if there's new CS:GO config variables to tweak!
+Contributions are welcome if you see any area of improvement possible to the scripts or if there's new CS2 config variables to tweak!
